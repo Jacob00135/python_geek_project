@@ -1,0 +1,6 @@
+venv/*
+**/.idea/*
+**/__pycache__/*
+Python极客项目编程源代码.zip
+spirograph/images/*
+spirograph/Spirograph.png
