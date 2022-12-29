@@ -4,3 +4,5 @@ venv/*
 Python极客项目编程源代码.zip
 spirograph/images/*
 spirograph/Spirograph.png
+music_generator/base_audio
+music_generator/audio
