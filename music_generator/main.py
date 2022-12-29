@@ -122,14 +122,11 @@ class FiveNote(object):
 
     def note_sequence(self, funcs: list) -> list:
         result = []
-        q = deque()
-        q.extend(funcs)
-        while q:
-            item = q.popleft()
-            if callable(item):
-                result.append(item)
-            elif isinstance(item, list):
-                result.extend(self.note_sequence(item))
+        for f in funcs:
+            if callable(f):
+                result.append(f)
+            else:
+                result.extend(self.note_sequence(f))
 
         return result
 
@@ -171,7 +168,7 @@ if __name__ == '__main__':
         fn.beats(1)
     ])
 
-    print([
+    play([
         seq3,
         seq3
     ])
